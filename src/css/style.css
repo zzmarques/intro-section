@@ -167,11 +167,13 @@ header nav .container-btns-nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100px;
+  gap: 25px;
+  height: 90px;
 }
 @media (min-width: 1024px) {
   header nav .container-btns-nav {
     flex-direction: row;
+    gap: 0;
     width: 290px;
     height: 60px;
   }

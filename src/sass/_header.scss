@@ -119,10 +119,12 @@ header {
         .container-btns-nav {
             @include center;
             flex-direction: column;
-            height: 100px;
+            gap: 25px;
+            height: 90px;
 
             @include desktop {
                 flex-direction: row;
+                gap: 0;
                 width: 290px;
                 height: 60px;
                
