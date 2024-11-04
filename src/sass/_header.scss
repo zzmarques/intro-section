@@ -1,0 +1,133 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    padding-inline: 20px;
+
+    .logo {
+        @include center;
+        height: 60px;
+
+        @include desktop {
+        }
+    }
+
+    .menu {
+        @extend .logo;
+
+        @include desktop {
+            display: none;
+        }
+        
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    nav {
+        display: none;
+        background: $almost-white;
+        width: 60%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 999;
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            width: 91%;
+            position: relative;
+            z-index: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            list-style-type: none;
+
+            @include desktop {
+                position: relative;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            li {
+                cursor: pointer;
+                padding: 10px 20px;
+                color: $medium-gray;
+                font-size: 18px;
+
+                &:hover {
+                    color: $almost-black;
+                }
+
+                img {
+                    margin-left: 15px;
+                }
+                
+                a {
+                    color: $medium-gray;
+                    text-decoration: none;
+                    font-size: 18px;
+
+                    &:hover {
+                        color: $almost-black;
+                    }
+                }
+            }
+
+            .ul-dropdown {
+                display: none;
+                margin-top: 12px;
+                gap: 1px;
+
+                @include desktop {
+                    position: absolute;
+                    top: 50px;
+                    flex-direction: column;
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                }
+                 img {
+                    margin: 0px 10px 0px 0px;
+                 }
+            }
+
+            .ul1 {
+                @include desktop {
+                    left: -45px;
+                }
+            }
+
+            .ul2 {
+                @include desktop {
+                    left: 190px
+                }
+            }
+        }
+
+        .container-btns-nav {
+            @include center;
+            flex-direction: column;
+            height: 100px;
+
+            @include desktop {
+                flex-direction: row;
+                width: 290px;
+                height: 60px;
+               
+            }
+        }
+    }
+
+}

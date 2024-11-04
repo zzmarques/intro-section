@@ -1,0 +1,96 @@
+main {
+    width: 100%;
+    height: auto;
+
+    @include desktop {
+       display: flex;
+       flex-direction: row-reverse;
+       justify-content: center;
+    }
+
+    img {
+        width: 100%;
+
+        @include desktop {
+            height: 550px;
+        }
+    }
+
+    .content {
+        @include center;
+        flex-direction: column;
+
+        @include desktop {
+            align-items: flex-start;
+            width: 50%;
+        }
+
+        .txt {
+            @include center;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+
+            @include desktop {
+                align-items: flex-start;
+                text-align: left;
+                gap: 35px;
+                width: 60%;
+            }
+    
+            h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: $almost-black;
+                
+                @include desktop {
+                    font-size: 3.8rem;
+                }
+            }
+    
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 25px;
+                max-width: 340px;
+                color: $medium-gray;
+
+                @include desktop {
+                    max-width: 380px;
+                }
+            }
+        }
+
+        .container-logos {
+            width: 100%;
+            height: auto;
+
+            @include desktop {
+                display: flex;
+                height: 80px;
+            }
+        
+            .figure-footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 100%;
+                @include desktop {
+                   justify-content: flex-start;
+                   gap: 28px;
+                }
+                img {
+                    width: 80px;
+                    height: auto;
+
+                }
+            }
+           
+        }
+
+    }
+
+    
+}

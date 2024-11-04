@@ -1,0 +1,21 @@
+@import './mixins';
+@import './variables';
+@import './buttons';
+@import './header';
+@import './main';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Epilogue", sans-serif;
+}
+
+body {
+    
+    @include desktop {
+        background: $almost-white;
+    }
+}
+
